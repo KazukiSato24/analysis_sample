@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: analysis_sample
+    working_dir: /app
+    volumes:
+      - ./analysis_sample:/app
+    ports:
+      - "8010:8010"
